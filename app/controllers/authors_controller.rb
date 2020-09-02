@@ -18,6 +18,6 @@ class AuthorsController < ApplicationController
             genre: params[:genre]
         )
 
-        render json: author
+        render json: @author
     end
 end
