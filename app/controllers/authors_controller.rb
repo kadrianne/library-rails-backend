@@ -11,4 +11,13 @@ class AuthorsController < ApplicationController
 
         render json: @author, include: :books
     end
+
+    def create
+        @author = Author.create(
+            name: params[:name],
+            genre: params[:genre]
+        )
+
+        render json: author
+    end
 end
